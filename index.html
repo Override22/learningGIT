@@ -1,0 +1,31 @@
+
+<!---------------------------->
+<!------- INICIO HTML -------->
+<!---------------------------->
+<br>
+<h3 align='center'><b>ORDEN DE SALIDA </b></h3>
+<form name="form1" action="orden_salida.php" method="post">
+
+	<input type="hidden" name="tipo_trabajo_otr" id="tipo_trabajo_otr" size='2'>
+
+	<table>
+		<tr>
+			<td valign="top">
+				<table width="100%" border="0" cellpadding="3" cellspacing="1">
+					<tr>
+						<td valign="top" width="70%" class="th2"><b>Ingrese OT:</b></td>
+						<td class="impar"><input type="hidden" name="id_otr" id="id_otr"><input type="text" name="codigo_otr" id="codigo_otr" size="15" value="" onfocus="top.js.mascara_numero(event,0,0,15);" onChange="Datos_Orden_Trabajo();">
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>
+				<button type="button" name="imprimir" id="imprimir" onClick="imprimir_pdf();" disabled><b>Imprimir</b> <img src="<?php echo icono("actions/fileprint.png"); ?>"></button>
+			</td>
+		</tr>
+	</table>
+
+</form>
